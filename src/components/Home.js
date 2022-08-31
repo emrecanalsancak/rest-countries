@@ -57,7 +57,7 @@ const Home = () => {
         {!inputSearch &&
           !regionSearch &&
           countries.map((country, i) => (
-            <Link to="rest-countries/details" state={country} key={i}>
+            <Link to="/details" state={country} key={i}>
               <ThumbDetail
                 title={country.name.common}
                 image_url={country.flags.svg}
@@ -72,7 +72,7 @@ const Home = () => {
           countries
             .filter((el) => el.name.common.toLowerCase().includes(inputSearch))
             .map((country, i) => (
-              <Link to="rest-countries/details" state={country} key={i}>
+              <Link to="/details" state={country} key={i}>
                 <ThumbDetail
                   title={country.name.common}
                   image_url={country.flags.svg}
@@ -87,7 +87,7 @@ const Home = () => {
           countries
             .filter((el) => el.region.toLowerCase().includes(regionSearch))
             .map((country, i) => (
-              <Link to="rest-countries/details" state={country} key={i}>
+              <Link to="/details" state={country} key={i}>
                 <ThumbDetail
                   title={country.name.common}
                   image_url={country.flags.svg}
