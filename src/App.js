@@ -8,7 +8,7 @@ function App() {
     <div style={{ height: "100vh" }}>
       <Header />
       <Routes>
-        <Route path="rest-countries/details" element={<Details />}></Route>
+        <Route path="/details" element={<Details />}></Route>
         <Route path="/rest-countries" element={<Home />}></Route>
       </Routes>
     </div>
