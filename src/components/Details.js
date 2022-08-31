@@ -7,7 +7,7 @@ const Details = () => {
   let { state } = useLocation();
 
   const handleNavigate = () => {
-    navigate("/");
+    navigate("/rest-countries");
   };
 
   return (
