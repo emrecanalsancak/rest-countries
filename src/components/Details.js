@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Details = () => {
   let navigate = useNavigate();
@@ -7,7 +7,7 @@ const Details = () => {
   let { state } = useLocation();
 
   const handleNavigate = () => {
-    navigate("/rest-countries");
+    navigate("/");
   };
 
   return (
@@ -20,15 +20,21 @@ const Details = () => {
           <i className="fa fa-arrow-left"></i> Back
         </button>
       </div>
-      <div className="container flex mx-auto p-8 pl-0 pr-0">
-        <img src={state.flags.svg} className="w-1/2 pr-8" alt="Country flag" />
+      <div className="container flex flex-col lg:flex-row items-center  mx-auto p-8  pr-0">
+        <img
+          src={state.flags.svg}
+          className="w-full lg:w-1/2 pr-8"
+          alt="Country flag"
+        />
         <div className="p-8 pl-0">
           <h2 className="font-bold text-2xl mb-8">{state.name.official}</h2>
           <div className="grid grid-cols-2 gap-x-20 gap-y-4 ">
             <p className="font-bold">
               Native Name: &nbsp;
               <span className="dark:text-gray-400 text-gray-700 text-sm">
-                {state.name.official}
+                {[...Object.values(state.name.nativeName)]
+                  .map((el) => el.official)
+                  .join(", ")}
               </span>
             </p>
             <p className="font-bold">
@@ -64,20 +70,19 @@ const Details = () => {
             <p className="font-bold">
               Currencies: &nbsp;
               <span className="dark:text-gray-400 text-gray-700 text-sm">
-                {}
+                {[...Object.values(state.currencies)].map((el) => el.name)}
               </span>
             </p>
             <p className="font-bold">
               Languages: &nbsp;
               <span className="dark:text-gray-400 text-gray-700 text-sm">
-                {Object.values(state.languages) + ", "}
+                {[...Object.values(state.languages)].join(", ")}
               </span>
             </p>
             <p className="font-bold">
               <span className="dark:text-gray-400 text-gray-700 text-sm"></span>
             </p>
           </div>
-          <Link></Link>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const ThumbDetail = ({ title, image_url, population, region, capital }) => {
   return (
-    <div className="container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
+    <div className="transition-transform duration-500 hover:scale-110 container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
       <img
         src={image_url}
         alt="country flag"

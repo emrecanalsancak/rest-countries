@@ -34,13 +34,13 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 dark:text-white">
+    <div className="bg-gray-100 dark:bg-gray-800 dark:text-white px-5">
       <Input
         setCountries={setCountries}
         onChangeCountry={countrySearch}
         onChangeRegion={regionFilter}
       />
-      <div className="container grid grid-cols-4 gap-16 mx-auto">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-12 mx-auto lg:grid-cols-4 lg:gap-16">
         {loader && (
           <BallTriangle
             height={100}
