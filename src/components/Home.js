@@ -37,7 +37,7 @@ const Home = () => {
         onChangeCountry={countrySearch}
         onChangeRegion={regionFilter}
       />
-      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-12 mx-auto lg:grid-cols-4 lg:gap-16">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 place-items-center gap-12 mx-auto lg:grid-cols-4 lg:gap-16">
         {loader && (
           <BallTriangle
             height={100}

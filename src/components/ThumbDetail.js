@@ -2,11 +2,11 @@ import React from "react";
 
 const ThumbDetail = ({ title, image_url, population, region, capital }) => {
   return (
-    <div className="h-[290px] transition-transform duration-500 hover:scale-110 container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
+    <div className="h-[350px] w-[300px] transition-transform duration-500 hover:scale-110 container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
       <img
         src={image_url}
         alt="country flag"
-        className="h-1/2 w-full rounded-tl-lg rounded-tr-lg"
+        className="h-1/2 w-full object-cover rounded-tl-lg rounded-tr-lg"
       />
       <div className="p-4">
         <h3 className="font-bold mb-4">{title}</h3>
